@@ -78,29 +78,94 @@ function concatenator(array, number) {
 }
 
 // testing example 1
-console.log(concatenator(gibberish, 3));
-// testing example 2
-console.log(concatenator(gibberish, 2));
+// console.log(concatenator(gibberish, 3));
+// // testing example 2
+// console.log(concatenator(gibberish, 2));
 
 
+// looping through arrays of objects checkpoint
 
 // function to accept an array of objects
 // copy property from each object
 // return sum of all properties
 
-let employees = 
+let employeeGroup1 = 
 [
     { name: "Tony", yearsOfExperience: 10 }, 
     { name: "Carla", yearsOfExperience: 4 },
     { name: "Kris", yearsOfExperience: 14 }
 ]
 
+let employeeGroup2 = 
+[
+    { name: "Tony", yearsOfExperience: 10 }, 
+    { name: "Carla", yearsOfExperience: 4 },    
+]
+
 function sumOfYearsExperience (array) {
     let totalYears = 0;
-    for (employee of array) {
-        
-    }
+    for (let employee of array) {
+        totalYears += employee.yearsOfExperience;
+    } // end for
     return totalYears;
 }
 
+// testing employeeGroup1
+console.log(sumOfYearsExperience(employeeGroup1));
+// testing employeeGroup2
+console.log(sumOfYearsExperience(employeeGroup2));
 
+
+// loops & two dimensional arrays checkpoint
+
+// function to accept an array of arrays
+// copy values of numbers in all arrays
+// return the sum of the values
+
+let nestedArray1 = [ [1, 2], [3, 4, 5] ];
+let nestedArray2 = [ [1, 2], [3, 4, 5], [6] ];
+
+
+function sumOfNestedArrays (array) {
+    console.log("in <sumOfNestedArrays>");
+    let result = 0;
+    for (let nestedArray of array) {
+        // console.log(nestedArray);
+        for (let number of nestedArray) {
+            // console.log(number);
+            result += number;
+        }
+    }
+    return result;
+}
+// testing nestedArray1
+console.log("the sum is:", sumOfNestedArrays(nestedArray1));
+// testing nestedArray2
+console.log("the sum is:", sumOfNestedArrays(nestedArray2));
+
+/*
+// what about an array nested in an array in an array???
+let rabbit = 0;
+let hole = [ [1, 2], [3, 4, 5], [6, [7, 8]]];
+
+function rabbitHole (array) {
+    console.log("in <rabbitHole> and might not get out");
+    let result = 0;
+    
+    for (let nestedArray of array) {
+        // console.log("nested array:", nestedArray);
+
+        for (let nest of nestedArray) {
+            // console.log("nest of nested array:", nest);
+            
+            // broken
+            for (let anotherNest of nest) {
+                console.log(anotherNest);
+            }
+        }
+    }
+    return rabbit;
+}
+console.log(rabbit);
+console.log("I give up", rabbitHole(hole));
+*/
