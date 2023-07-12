@@ -5,11 +5,11 @@ return num1 + num2;
 }
 
 // testing sumOfTwo
-let test1 = sumOfTwo(2, 3);
-console.log("should be 5:", test1);
+// let test1 = sumOfTwo(2, 3);
+// console.log("should be 5:", test1);
 // testing sumOfTwo with negative number
-let test2 = sumOfTwo(2, -7);
-console.log("should be 9:", test2);
+// let test2 = sumOfTwo(2, -7);
+// console.log("should be 9:", test2);
 
 
 // conditional checkpoint
@@ -27,11 +27,11 @@ function toCompare (num1, num2) {
 }
 
 // testing toCompare, num1 > num2
-console.log(toCompare (3, 2));
+// console.log(toCompare (3, 2));
 // testing toCompare, num1 < num2
-console.log(toCompare (2, 7));
+// console.log(toCompare (2, 7));
 // testing toCompare, num1 = num2
-console.log(toCompare (7, 7));
+// console.log(toCompare (7, 7));
 
 // array checkpoint
 
@@ -47,6 +47,60 @@ function firstLastSum (array) {
 }
 
 // testing firstLastSum
-console.log("should be 6:", firstLastSum(array1));
-console.log("should be 18:", firstLastSum(array2));
+// console.log("should be 6:", firstLastSum(array1));
+// console.log("should be 18:", firstLastSum(array2));
+
+
+// loops, arrays, concatenation checkpoint
+
+// function to accept 2 parameters; first is an array, second is a number
+// loop through array and copy values
+  // starting index is the number parameter
+  // ending is last index of the array
+// return a concatenated string with values of array indexes
+  // don't forget a space in returned string!
+
+let gibberish = ["ASDF", "BLAH", "Oh!", "Hi", "There!"]; // array
+
+function concatenator(array, number) {
+  console.log("in <concatenator>");
+
+  let result = "";
+
+  for (let wordIndex in array) {
+    // console.log(index);
+    if (wordIndex >= number) {
+      result += `${array[wordIndex]} `;
+      // console.log(result)
+    } // end if
+  } // end for in
+  return result;
+}
+
+// testing example 1
+console.log(concatenator(gibberish, 3));
+// testing example 2
+console.log(concatenator(gibberish, 2));
+
+
+
+// function to accept an array of objects
+// copy property from each object
+// return sum of all properties
+
+let employees = 
+[
+    { name: "Tony", yearsOfExperience: 10 }, 
+    { name: "Carla", yearsOfExperience: 4 },
+    { name: "Kris", yearsOfExperience: 14 }
+]
+
+function sumOfYearsExperience (array) {
+    let totalYears = 0;
+    for (employee of array) {
+        
+    }
+    return totalYears;
+}
+
 
